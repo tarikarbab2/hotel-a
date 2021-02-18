@@ -1,0 +1,14 @@
+{
+  "name": "hotel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "home.js",
+  "scripts": {
+    "compile:sass": "node-sass resources/sass/main.scss resources/css/main.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
