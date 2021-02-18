@@ -75,7 +75,7 @@ ___________________*/
 
 .nav{
     display: flex;
-    height: 8rem;
+    height: 4rem;
     width: 100%;
     margin: 0 auto;
     justify-content: space-between;
@@ -84,10 +84,10 @@ ___________________*/
     z-index: 50;
     background-color: transparent;
     align-items: center;
-    position: absolute;
+    position: fixed;
     overflow: hidden;
     @include responed(small-tablet){
-        position: absolute;
+        position: fixed;
         flex-direction: column;
         justify-content: flex-end;
         align-items: flex-end;
@@ -110,14 +110,20 @@ ___________________*/
        margin-left: 5rem;
         order: 0;
         @include responed(small-tablet){
-            padding: 2rem;
-           
+            padding: 1.5rem;
+           background-color: #000000;
             order: 0;
             width: 100%;
             margin-right: 0;
             text-align: start;
             height: 100%;
+           
             
+        }
+    }
+    &__logo h1{
+        @include responed(small-tablet){
+        font-size: 1.2rem;
         }
     }
     &__items{
@@ -131,9 +137,8 @@ ___________________*/
         @include responed(small-tablet){
             align-items: flex-end;
             flex-direction: column;
-           // justify-content: flex-end;
-            display: none;
-            width: 20rem;
+           display: none;
+            width: 10rem;
             background-color: #3d59a7;
             box-shadow: 1rem 1rem 1rem rgba(#000000,0.2);
             
@@ -141,7 +146,7 @@ ___________________*/
   
         }
         @include responed(tablet-landscape){
-            display: none;
+            
         }
       
        
@@ -155,6 +160,9 @@ ___________________*/
           
       padding-left: 4rem;
       font-weight: 500;
+      @include responed(tablet-port){
+          padding-left: 1.5rem;
+      }
       @include responed(small-tablet){
           
          
@@ -182,7 +190,7 @@ ___________________*/
       opacity: 70%;
       @include responed(phone){
           opacity: 100%;
-          font-size: 2.5rem;
+          font-size: 1.5rem;
           
       }
       
@@ -196,8 +204,8 @@ ___________________*/
           display: none;
           @include responed(small-tablet){
               display: flex;
-              width:4rem;
-              height: 4rem;
+              width:3rem;
+              height: 3rem;
               background-color: #ffffff;
               border-radius: 10rem;
               
@@ -208,8 +216,8 @@ ___________________*/
               
               position: fixed;
               margin-bottom: 2rem;
-              top: 1.5rem;
-              right: 3rem;
+              top: 0.7rem;
+              right: 1.5rem;
               border: none;
               &:focus{
                   outline: none;
@@ -224,8 +232,8 @@ ___________________*/
       }
       
       &__hum{
-          width: 2.5rem;
-          height: 2.5rem;
+          width: 2rem;
+          height: 2rem;
           
          
   
@@ -234,6 +242,16 @@ ___________________*/
   
   
   
+  }
+  .nav-colored{
+    background-color: #000000;
+    @include responed(small-tablet){
+      background-color: transparent;
+    }
+    
+  }
+  .nav-transparent{
+    background-color: transparent;
   }
 
   header{
@@ -627,4 +645,12 @@ footer .row{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+footer .row a:visited,
+footer .row a:link{
+    list-style: none;
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #ffffff;
 }
